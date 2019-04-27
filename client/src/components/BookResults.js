@@ -61,7 +61,7 @@ class BookResults extends React.Component {
 		  	{(this.props.image) ? <img src= {
 		  		(this.props.image.smallThumbnail) ? this.props.image.smallThumbnail :
 		  		(this.props.image.thumbnail) ? this.props.image.thumbnail : ""
-		  	} alt="cover"/>:null}
+		  	} alt="cover"/> : null}
 		  	<p>{(this.props.description) ? this.props.description: "N/A"}</p>
 		  </div>
 		</div>    	
