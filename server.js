@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const mongoose = require("mongoose");
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks"
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/googlebooks"
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true})
   .then(() => {
     console.log("🗄 ==> Successfully connected to mongoDB.");
