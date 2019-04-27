@@ -7,7 +7,7 @@ function SearchForm(props) {
 		  <form id="bookSearch">
 		  	<label htmlFor="bookInput" form="bookSearch">Google a Book:</label>
 		  	<br></br>
-		  	<input type="text" name="bookInput" id="bookInput" form="bookSearch" onChange={(event) => props.handleChange(event)} placeholder="Title" required />
+		  	<input type="text" name="bookInput" id="bookInput" form="bookSearch" onChange={(event) => props.handleChangeEvent(event)} placeholder="Title" required />
 		  	<br></br>
 		  	<button type="submit" onClick={(event) => props.handleSearchEvent(event)}>Search</button>
 		  </form>

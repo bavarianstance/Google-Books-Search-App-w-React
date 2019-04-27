@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,7 +19,7 @@ mongoose.connect(MONGODB_URI, {useNewUrlParser: true})
     console.log(`Error connecting to mongoDB: ${err}`);
   });
 
-require("./routes/api-routes")(app);
+require("./routes/api_routes")(app);
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

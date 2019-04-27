@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
 	getBooks: () => {
-		return axios.get("api/books");
+		return axios.get("/api/books");
 	},
 	searchBooks: (query) => {
 		return axios.post("/search", {title: query});

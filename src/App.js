@@ -6,7 +6,7 @@ import Saved from "./pages/Saved";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 
-class App etends Component {
+class App extends Component {
   render() {
     return (
       <Router>

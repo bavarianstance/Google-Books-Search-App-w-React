@@ -5,7 +5,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 class BookResults extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state {
+		this.state = {
 			saved:false,
 			deleted:false
 		}
@@ -43,8 +43,9 @@ class BookResults extends React.Component {
 
 	render() {
 		return (
-			<div className="bookResults" id={(this.props.id) ? this.props.id: null} stlye={(display: this.state.deleted ? "none" : "block")}>
+			<div className="bookResults" id={(this.props.id) ? this.props.id: null} style={{display: this.state.deleted ? "none" : "block"}}>
 			  <div className="row">
+			  	<div className="aboutBook">
 			  	<h4>{this.props.title}</h4>
 			  	<p>Author(s): {(this.props.authors) ? this.props.authors.join(", "): "N/A"}</p>
 			  </div>
@@ -53,7 +54,8 @@ class BookResults extends React.Component {
 				(this.props.link) ? <a href={this.props.link} target="_blank" rel="noopener noreferrer"><button type="button" name="info">More Info</button></a> : null
 			}
 			{
-				(this.props.path === "/") ? <button type="button" name="save" onClick={this.handleSaveEvent} disabled={(this.state.saved) ? "Saved : Save"} </button> : <button type="button" name="Remove" onClick={this.handleDeleteEvent} disabled={this.state.deleted}>Remove</button>
+				(this.props.path === "/")? <button type="button" name="save" onClick={this.handleSaveEvent} disabled={this.state.saved}>{(this.state.saved)? "Saved" : "Save"}</button> : <button type="button" name="Remove" onClick={this.handleDeleteEvent} disabled={this.state.deleted}>Remove</button>
+
 			}  
 		    </div>
 		  </div>
