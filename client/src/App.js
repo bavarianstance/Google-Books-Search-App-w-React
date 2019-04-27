@@ -18,7 +18,8 @@ class App extends Component {
             <Route path="/saved" component={Saved}/>
           </Switch>
         </div>
-      </Router>      
+      </Router>  
+
       );
   }
 }

@@ -2,16 +2,16 @@ import React from "react";
 
 function SearchForm(props) {
 	return (
-		<div id="searchContainer">
-		  <h3>Find Books</h3>
-		  <form id="bookSearch">
-		  	<label htmlFor="bookInput" form="bookSearch">Google a Book:</label>
-		  	<br></br>
-		  	<input type="text" name="bookInput" id="bookInput" form="bookSearch" onChange={(event) => props.handleChangeEvent(event)} placeholder="Title" required />
-		  	<br></br>
-		  	<button type="submit" onClick={(event) => props.handleSearchEvent(event)}>Search</button>
-		  </form>
-	     </div>	  	
+<div className="container">
+<div className="input-group input-group-lg">
+  <div className="input-group-prepend">
+    <span className="input-group-text" id="inputGroup-sizing-lg">Books</span>
+  </div>
+  <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" onChange={(event) => props.handleChangeEvent(event)} placeholder="Title" required />
+  <button type="submit" className="btn btn-info" onClick={(event) => props.handleSearchEvent(event)}>Search</button>
+</div>
+</div>
+
 		);
 }
 

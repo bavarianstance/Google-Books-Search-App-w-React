@@ -43,7 +43,7 @@ class BookResults extends React.Component {
 
 	render() {
 		return (
-			<div className="bookResults" id={(this.props.id) ? this.props.id: null} style={{display: this.state.deleted ? "none" : "block"}}>
+			<div className="bookResults container" id={(this.props.id) ? this.props.id: null} style={{display: this.state.deleted ? "none" : "block"}}>
 			  <div className="row">
 			  	<div className="aboutBook">
 			  	<h4>{this.props.title}</h4>
@@ -51,10 +51,10 @@ class BookResults extends React.Component {
 			  </div>
 			<div className="divButton">
 			{
-				(this.props.link) ? <a href={this.props.link} target="_blank" rel="noopener noreferrer"><button type="button" name="info">More Info</button></a> : null
+				(this.props.link) ? <a href={this.props.link} target="_blank" rel="noopener noreferrer"><button type="button" className="btn btn-primary" name="info">More Info</button></a> : null
 			}
 			{
-				(this.props.path === "/")? <button type="button" name="save" onClick={this.handleSaveEvent} disabled={this.state.saved}>{(this.state.saved)? "Saved" : "Save"}</button> : <button type="button" name="Remove" onClick={this.handleDeleteEvent} disabled={this.state.deleted}>Remove</button>
+				(this.props.path === "/")? <button type="button" className="btn btn-success" name="save" onClick={this.handleSaveEvent} disabled={this.state.saved}>{(this.state.saved)? "Saved" : "Save"}</button>: <button type="button" className="btn btn-danger" name="Remove" onClick={this.handleDeleteEvent} disabled={this.state.deleted}>Remove</button>
 
 			}  
 		    </div>

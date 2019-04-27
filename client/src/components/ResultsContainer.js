@@ -4,7 +4,7 @@ import BookResults from "./BookResults";
 function ResultsContainer(props) {
 	if (props.path === "/") {
 		return (
-			<div id="resultsContainer">
+			<div className="container" id="resultsContainer">
 			<h3>Books Found</h3>
 			{props.bookData.map((result) => {
 				const bookData = result.volumeInfo;
@@ -22,7 +22,7 @@ function ResultsContainer(props) {
 	} else if (props.path === "/saved") {
 		if (props.savedBooks.length > 0) {
 			return (
-				<div id="resultsContainer">
+				<div className="container" id="resultsContainer">
 				  <h3>Reading List</h3>
 				  {props.savedBooks.map((result) => {
 				  	return <BookResults
@@ -39,7 +39,7 @@ function ResultsContainer(props) {
 				);
 		} else {
 			return (
-				<div id="resultsContainer">
+				<div id="resultsContainer" className="container">
 				<h3>Reading List</h3>
 				<p>Whoops. Nothing found.</p>
 				</div>
