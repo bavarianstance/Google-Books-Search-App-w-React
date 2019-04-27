@@ -27,5 +27,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bavarianstance/hw15-googlebooks-react-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bavarianstance/hw15-googlebooks-react-app/issues"
+  },
+  "homepage": "https://github.com/bavarianstance/hw15-googlebooks-react-app#readme"
 }
