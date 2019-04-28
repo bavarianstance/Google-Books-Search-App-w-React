@@ -11,10 +11,10 @@
 
 ### App Screenshots
 * Main Page
-![homepage](.client/src/imgs/main.png "Main Page")
+![homepage](./client/src/imgs/main.png "Main Page")
 
 * Reading List Page
-![readinglist](.client/src/imgs/readinglist.png "Reading List Page")
+![readinglist](./client/src/imgs/readinglist.png "Reading List Page")
 
 ### Technologies Used
 * Node.JS 
