@@ -54,7 +54,7 @@ class BookResults extends React.Component {
 				(this.props.link) ? <a href={this.props.link} target="_blank" rel="noopener noreferrer"><button type="button" className="btn btn-primary" name="info">More Info</button></a> : null
 			}
 			{
-				(this.props.path === "/")? <button type="button" className="btn btn-success" name="save" onClick={this.handleSaveEvent} disabled={this.state.saved}>{(this.state.saved)? "Saved" : "Save"}</button>: <button type="button" className="btn btn-danger" name="Remove" onClick={this.handleDeleteEvent} disabled={this.state.deleted}>Remove</button>
+				(this.props.path === "/")? <button type="button" className="btn btn-success" name="save" onClick={this.handleSaveEvent} disabled={this.state.saved}>{(this.state.saved)? "Saved" : "Save"} </button>: <button type="button" className="btn btn-danger" name="Remove" onClick={this.handleDeleteEvent} disabled={this.state.deleted}>Remove</button>
 
 			}  
 		    </div>
