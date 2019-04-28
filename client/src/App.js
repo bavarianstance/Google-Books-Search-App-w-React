@@ -1,3 +1,4 @@
+// import appropriate components for rendering
 import React, {Component} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -6,8 +7,10 @@ import Saved from "./pages/Saved";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 
+// init main app
 class App extends Component {
   render() {
+    // render components and init main routes using router
     return (
       <Router>
         <div>
@@ -23,5 +26,5 @@ class App extends Component {
       );
   }
 }
-
+// export main app for global use
 export default App;

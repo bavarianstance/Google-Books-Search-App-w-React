@@ -1,5 +1,6 @@
 import React from "react";
 
+// init / render searchform
 function SearchForm(props) {
 	return (
 <div className="container">

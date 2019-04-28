@@ -23,8 +23,8 @@
 * Javascript ES6
 * jQuery
 * Bootstrap
-* MongoDB
-* Mongoose
+* MongoDB / Mongoose
+* Axios
 
 ### Comments
 * Added edge case to prevent dupe saves

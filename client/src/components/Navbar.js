@@ -1,6 +1,6 @@
 import React from "react";
-// import "./navbar.css";
 
+// init navbar
 const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">

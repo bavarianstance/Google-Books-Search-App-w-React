@@ -1,7 +1,10 @@
+// import components
 import React from "react";
 import BookResults from "./BookResults";
 
+// def function for resultscontainers
 function ResultsContainer(props) {
+	// def and init route for book search results 
 	if (props.path === "/") {
 		return (
 			<div className="container" id="resultsContainer">
@@ -19,6 +22,7 @@ function ResultsContainer(props) {
 			})}
 			</div>
 			);
+		// def and init route for saved books 
 	} else if (props.path === "/saved") {
 		if (props.savedBooks.length > 0) {
 			return (
@@ -38,6 +42,7 @@ function ResultsContainer(props) {
 				  </div>
 				);
 		} else {
+			// render empty message if saved books array is empty
 			return (
 				<div id="resultsContainer" className="container">
 				<h3>Reading List</h3>

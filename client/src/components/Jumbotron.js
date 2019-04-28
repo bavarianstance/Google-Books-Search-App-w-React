@@ -1,6 +1,8 @@
+// import components
 import React from "react";
 import "./jumbotron.css";
 
+// init jumbotron
 const Jumbotron = () => {
 	return (
 <div className="jumbotron jumbotron-fluid">

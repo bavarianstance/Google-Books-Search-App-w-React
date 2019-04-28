@@ -1,20 +1,25 @@
+// import components
 import React from "react"
 import API from "../utils/API";
-// import {BrowserRouter as Router} from "react-router-dom";
 
+// init bookresults constructor function
 class BookResults extends React.Component {
 	constructor(props) {
 		super(props);
+		// def default states
 		this.state = {
 			saved:false,
 			deleted:false
 		}
+		// bind save and delete events
 		this.handleSaveEvent = this.handleSaveEvent.bind(this);
 		this.handleDeleteEvent = this.handleDeleteEvent.bind(this);
 	}
 
+	// def handle save event fcn
 	handleSaveEvent = function(event) {
 		this.setState({saved:true});
+		// assign data to appropriate capture values
 		const data = {
 			title: this.props.title,
 			authors: this.props.authors,
@@ -23,24 +28,25 @@ class BookResults extends React.Component {
 			description: this.props.description
 		}
 		event.preventDefault();
+		// init savebook api
 		API.saveBook(data).then((result) => {
 			console.log(result);
 		}).catch((err) => {
 			console.log(err);
 		});
 	}	
-
+	// def handle delete event fcn
 	handleDeleteEvent = function(event) {
+		// set state to appropriatevalue for deletion
 		this.setState({deleted:true});
 		event.preventDefault();
 		API.deleteBook(this.props.id).then((result) => {
 			console.log(result);
-			// Router.dispatch(this.props.location, null)
 		}).catch((err) => {
 			console.log(err);
 		});
 	}
-
+// init main render for results via JSX
 	render() {
 		return (
 			<div className="bookResults container" id={(this.props.id) ? this.props.id: null} style={{display: this.state.deleted ? "none" : "block"}}>

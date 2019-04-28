@@ -1,7 +1,8 @@
+// import components
 import React from "react";
 import ResultsContainer from "../components/ResultsContainer";
 import API from "../utils/API";
-
+// init constructor function for saved books
 class Saved extends React.Component {
 	constructor(props) {
 		super(props);
@@ -9,7 +10,7 @@ class Saved extends React.Component {
 			savedBooks: []
 		}
 	}
-
+// after mounting, init work to save books to appropriate state and API
 	componentWillMount() {
 		API.getBooks().then((result) => {
 			this.setState({savedBooks : result.data});
@@ -17,7 +18,7 @@ class Saved extends React.Component {
 			console.log(error);
 		});
 	}
-
+// render saved books to results container
 	render() {
 		console.log(this.state.savedBooks);
 		return (
