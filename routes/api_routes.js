@@ -41,6 +41,8 @@ module.exports = function(app) {
 	});
 
 	app.get("*", (request, response) => {
-		response.sendFile(path.join(__dirname, "../build/index.html"));
+		const index = path.join(__dirname, 'build', 'index.html');
+  		res.sendFile(index);
+		// response.sendFile(path.join(__dirname, "../build/index.html"));
 	});
 }
